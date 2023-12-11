@@ -1,21 +1,10 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, doc, addDoc , query, limit, orderBy, where} from 'firebase/firestore/lite';
+import { collection, getDocs, doc, addDoc , query, limit, orderBy, where} from 'firebase/firestore/lite';
 import {db} from '../firebase';
 
 
 // // 読み取り
 // const docRef = doc(db, "test", "test_table");
-const docRef = collection(db, "post")
-// let post = {
-//     overview: null, 
-//     post_name: null, 
-//     thumbnail_url: null,
-//     comment: null,
-//     post_instruction: null,
-//     timestamp: null,
-//     tag_name: null,
-//     like_amount: null,
-// }
+const docRef = collection(db, "post");
 
 async function getNewPosts(get_num) {
     const q = query(docRef, orderBy("timestamp"), limit(get_num));

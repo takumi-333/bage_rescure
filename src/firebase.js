@@ -1,15 +1,8 @@
-// Import the functions you need from the SDKs 
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import    'firebase/compat/firestore';
-import { getFirestore, collection, getDocs, doc, addDoc, where, query } from 'firebase/firestore/lite';
-import { getStorage, ref, uploadBytes, uploadBytesResumable , getDownloadURL} from "firebase/storage";
+import 'firebase/compat/firestore';
+import { getFirestore } from 'firebase/firestore/lite';
+import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {

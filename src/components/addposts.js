@@ -1,6 +1,6 @@
 import { getStorage, ref, uploadBytes, uploadBytesResumable } from "firebase/storage";  
 import { db } from "../firebase";
-import { getFirestore, collection, getDocs, doc, addDoc , query, limit, orderBy} from 'firebase/firestore/lite';
+import { collection, getDocs, doc, addDoc , query, limit, orderBy} from 'firebase/firestore/lite';
 import { storage } from "../firebase";
 import { useEffect ,useState} from "react";
 
