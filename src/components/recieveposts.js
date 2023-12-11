@@ -15,21 +15,6 @@ function RecievePosts() {
         setPostsample(test);
     }
 
-    // const get_posted_data = async () => {
-    //     try {
-    //         const url = "http://"
-    //         const res = postsample;
-    //         console.log(res);
-    //         setPosts(res);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
-    // const sorted_posts = posts.sort((a, b) => {
-    //     if (a.time < b.time) return -1;
-    //     if (a.time > b.time) return 1;
-    //     return 0;
-    // });
     return (
         <>
             <>

@@ -33,10 +33,6 @@ async function getPopularPosts(get_num) {
 }
 
 async function getPostsByTag(search_tag) {
-    // if (typeof search_tag != String) {
-    //     console.error("Error: Invalid search tag");
-    //     return [];
-    // }
     const q = query(docRef, where("tag_name", "array-contains", search_tag));
     const querySnapshot =  await getDocs(q);
     let posts = []
