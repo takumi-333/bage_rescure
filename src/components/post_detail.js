@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import bgp from '../assets/image/bgp4.svg';
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from '../firebase';
-import { Getimg } from "./getimg";
+import { Getimg, Get_image } from "./getimg";
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import firebase from 'firebase/compat/app';
@@ -30,27 +30,6 @@ function Detail() {
     setIsliked(!isliked);
   };
 
-  function Get_image(post) {
-    const gsReference = ref(storage, "gs://bage-rescue.appspot.com/" + post.img_url);
-    const [imgurl, setImgurl] = useState(null);
-  
-
-    
-
-    useEffect(() => {
-      getDownloadURL(gsReference)
-        .then((url) => {
-          setImgurl(url);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }, []);
-
-    return (
-      <img src={imgurl} alt='post' className="w-6/12" />
-    );
-  }
 return (
   <div className='bg-cover bg-center overflow-hidden font-bold text-stone-800 min-h-screen' style={{ backgroundImage: `url(${bgp})` }}>
     <div className="border-b-2 border-stone-800">
